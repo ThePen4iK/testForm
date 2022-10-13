@@ -1,0 +1,10 @@
+.company{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 112px);
+  justify-content: center;
+  gap: 15px;
+  &__item{
+
+  }
+}

@@ -1,0 +1,86 @@
+.billing{
+  padding: 34px 0 0;
+  &__wrapper{
+    display: grid;
+    grid-template-columns: 562px 563px;
+    gap: 18px;
+    @media(max-width: 1200px){
+      grid-template-columns: 562px;
+      justify-content: center;
+    }
+    @media(max-width: 768px){
+      grid-template-columns: 1fr;
+    }
+  }
+  &__information{
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px 3px #E5E9ED;
+    border-radius: 5px;
+    @media(max-width: 1200px){
+      margin-bottom: 12px;
+    }
+  }
+  &__product{
+    @media(max-width: 1200px){
+      grid-row: -1;
+    }
+  }
+  &__header{
+    display: flex;
+    align-items: center;
+  }
+  &__title{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+    margin: 0;
+  }
+  &__tooltip{
+    margin-left: 10px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    &>span{
+      visibility: hidden;
+      width: 120px;
+      background: #000000;
+      color: #ffffff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 150%;
+      left: 50%;
+      margin-left: -60px;
+
+      &::after{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #000 transparent transparent transparent;
+      }
+    }
+
+    @media(any-hover: hover){
+      &:hover{
+        span{
+          visibility: visible;
+
+        }
+      }
+    }
+  }
+}

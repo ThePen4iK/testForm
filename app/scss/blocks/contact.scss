@@ -1,0 +1,33 @@
+.contact{
+
+  &__list{
+    list-style: none;
+
+
+    margin-left: 8px;
+
+  }
+  &__item{
+
+  }
+  &__link{
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #666C70;
+   span{
+     font-family: "Roboto", sans-serif;
+     font-size: 13px;
+     font-weight: 400;
+     line-height: 18px;
+     letter-spacing: 0em;
+     text-align: left;
+     color: #666C70;
+   }
+
+  }
+}

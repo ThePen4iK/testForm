@@ -1,0 +1,28 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "fonts.scss";
+
+// Можно менять
+@import "normalize.scss";
+// @import "null.scss";
+
+@import "general.scss";
+
+@import "blocks/container.scss";
+@import "blocks/section.scss";
+@import "header.scss";
+@import "blocks/selects.scss";
+
+/* blocks billing*/
+@import "blocks/billing.scss";
+@import "blocks/form.scss";
+@import "blocks/product.scss";
+@import "blocks/contact.scss";
+@import "blocks/company.scss";
+
+@import "footer.scss";
+
+
+
+
+
