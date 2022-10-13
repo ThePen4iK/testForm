@@ -8,7 +8,7 @@
       grid-template-columns: 562px;
       justify-content: center;
     }
-    @media(max-width: 768px){
+    @media(max-width: 610px){
       grid-template-columns: 1fr;
     }
   }
@@ -19,6 +19,9 @@
     border-radius: 5px;
     @media(max-width: 1200px){
       margin-bottom: 12px;
+    }
+    @media(max-width: 610px){
+      padding: 12px ;
     }
   }
   &__product{
@@ -73,14 +76,12 @@
         border-color: #000 transparent transparent transparent;
       }
     }
+    &:hover{
+      span{
+        visibility: visible;
 
-    @media(any-hover: hover){
-      &:hover{
-        span{
-          visibility: visible;
-
-        }
       }
     }
+
   }
 }

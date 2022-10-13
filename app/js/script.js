@@ -36,8 +36,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    let inputEmail = document.querySelector("input[type=email]")
-    let inputEmailRegex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+    const labels = document.querySelectorAll(".form__label");
+    labels.forEach((item) => {
+        const input = item.querySelector(".form__input");
+        item.addEventListener("focusin", () => {
+            item.classList.add("active");
+        });
+        item.addEventListener("focusout", () => {
+            if (input.value.length === 0) {
+                item.classList.remove("active");
+            }
+        });
+    });
+
+
+    const inputEmail = document.querySelector("input[type=email]")
+    const inputEmailRegex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+    let inputBorder = document.querySelector(".form__label--js");
 
 
     function validateEmail(value) {
@@ -45,9 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     function updateInput() {
         if (validateEmail(inputEmail.value)){
-            inputEmail.style.borderColor = 'green';
+            inputBorder.style.borderColor = 'green';
         } else {
-            inputEmail.style.borderColor = 'red';
+            inputBorder.style.borderColor = 'red';
         }
     }
     inputEmail.addEventListener('input', updateInput);

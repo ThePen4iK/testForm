@@ -57,6 +57,9 @@
         right: 12px;
       }
     }
+    &.active .form__span{
+      opacity: 0;
+    }
   }
 
   &__span {

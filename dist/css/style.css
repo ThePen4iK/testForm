@@ -513,7 +513,7 @@ input::-webkit-inner-spin-button {
             justify-content: center;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 610px) {
   .billing__wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -529,6 +529,11 @@ input::-webkit-inner-spin-button {
 @media (max-width: 1200px) {
   .billing__information {
     margin-bottom: 12px;
+  }
+}
+@media (max-width: 610px) {
+  .billing__information {
+    padding: 12px;
   }
 }
 @media (max-width: 1200px) {
@@ -589,10 +594,8 @@ input::-webkit-inner-spin-button {
   border-style: solid;
   border-color: #000 transparent transparent transparent;
 }
-@media (any-hover: hover) {
-  .billing__tooltip:hover span {
-    visibility: visible;
-  }
+.billing__tooltip:hover span {
+  visibility: visible;
 }
 
 .form {
@@ -659,6 +662,9 @@ input::-webkit-inner-spin-button {
 .form__label--tooltip .billing__tooltip {
   position: absolute;
   right: 12px;
+}
+.form__label.active .form__span {
+  opacity: 0;
 }
 .form__span {
   font-family: "Roboto", sans-serif;
